@@ -18,6 +18,7 @@ jobs:
       - run: git config user.email "<>"
       - run: git checkout -b temp-build
       - run: git add .
+      - run: git commit -m 'build'
       - run: gh pr create --title 'Merge build into base_branch' --body 'Created by Github action'
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
