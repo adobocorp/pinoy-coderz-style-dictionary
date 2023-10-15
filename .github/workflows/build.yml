@@ -1,0 +1,18 @@
+# This is a basic workflow that is manually triggered
+
+name: Build to tokens to org project
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on: [push]
+
+# Create a PR on https://github.com/adobocorp/pinoycoderz-tokens.git
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    name: Build and test
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bahmutov/npm-install@v1
+      - name: Send greeting
+        run: ls node_modules
