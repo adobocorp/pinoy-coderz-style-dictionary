@@ -19,6 +19,7 @@ jobs:
       - run: git checkout -b temp-build
       - run: git add .
       - run: git commit -m 'build'
+      - run: git push origin temp-build
       - run: gh pr create --title 'Merge build into base_branch' --body 'Created by Github action'
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
