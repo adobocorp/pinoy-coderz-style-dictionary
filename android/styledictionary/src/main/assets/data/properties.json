@@ -108,90 +108,46 @@
           ]
         }
       },
-      "opensans": {
+      "avenir": {
         "name": {
-          "value": "Open Sans",
+          "value": "Avenir",
           "filePath": "tokens/asset/font.json",
           "isSource": true,
           "original": {
-            "value": "Open Sans"
+            "value": "Avenir"
           },
-          "name": "asset_font_opensans_name",
+          "name": "asset_font_avenir_name",
           "attributes": {
             "category": "asset",
             "type": "font",
-            "item": "opensans",
+            "item": "avenir",
             "subitem": "name"
           },
           "path": [
             "asset",
             "font",
-            "opensans",
+            "avenir",
             "name"
           ]
         },
         "ttf": {
-          "value": "assets/fonts/OpenSans-Regular.ttf",
+          "value": "assets/fonts/Avenir-Regular.ttf",
           "filePath": "tokens/asset/font.json",
           "isSource": true,
           "original": {
-            "value": "assets/fonts/OpenSans-Regular.ttf"
+            "value": "assets/fonts/Avenir-Regular.ttf"
           },
-          "name": "asset_font_opensans_ttf",
+          "name": "asset_font_avenir_ttf",
           "attributes": {
             "category": "asset",
             "type": "font",
-            "item": "opensans",
+            "item": "avenir",
             "subitem": "ttf"
           },
           "path": [
             "asset",
             "font",
-            "opensans",
-            "ttf"
-          ]
-        }
-      },
-      "roboto": {
-        "name": {
-          "value": "Roboto",
-          "filePath": "tokens/asset/font.json",
-          "isSource": true,
-          "original": {
-            "value": "Roboto"
-          },
-          "name": "asset_font_roboto_name",
-          "attributes": {
-            "category": "asset",
-            "type": "font",
-            "item": "roboto",
-            "subitem": "name"
-          },
-          "path": [
-            "asset",
-            "font",
-            "roboto",
-            "name"
-          ]
-        },
-        "ttf": {
-          "value": "assets/fonts/Roboto-Regular.ttf",
-          "filePath": "tokens/asset/font.json",
-          "isSource": true,
-          "original": {
-            "value": "assets/fonts/Roboto-Regular.ttf"
-          },
-          "name": "asset_font_roboto_ttf",
-          "attributes": {
-            "category": "asset",
-            "type": "font",
-            "item": "roboto",
-            "subitem": "ttf"
-          },
-          "path": [
-            "asset",
-            "font",
-            "roboto",
+            "avenir",
             "ttf"
           ]
         }
@@ -26570,11 +26526,11 @@
   "font": {
     "family": {
       "base": {
-        "value": "Open Sans",
+        "value": "Avenir",
         "filePath": "tokens/font.json",
         "isSource": true,
         "original": {
-          "value": "{asset.font.opensans.name.value}"
+          "value": "{asset.font.avenir.name.value}"
         },
         "name": "font_family_base",
         "attributes": {

@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Sun, 15 Oct 2023 06:08:38 GMT
+// Generated on Sun, 15 Oct 2023 20:17:24 GMT
 
 
 #import "StyleDictionaryProperties.h"
@@ -69,39 +69,21 @@
           @"subitem": @"woff2"
           }
         },
-      @"opensans": @{
+      @"avenir": @{
         @"name": @{
-          @"value": @"Open Sans",
-          @"name": @"StyleDictionaryAssetFontOpensansName",
+          @"value": @"Avenir",
+          @"name": @"StyleDictionaryAssetFontAvenirName",
           @"category": @"asset",
           @"type": @"font",
-          @"item": @"opensans",
+          @"item": @"avenir",
           @"subitem": @"name"
           },
         @"ttf": @{
-          @"value": @"assets/fonts/OpenSans-Regular.ttf",
-          @"name": @"StyleDictionaryAssetFontOpensansTtf",
+          @"value": @"assets/fonts/Avenir-Regular.ttf",
+          @"name": @"StyleDictionaryAssetFontAvenirTtf",
           @"category": @"asset",
           @"type": @"font",
-          @"item": @"opensans",
-          @"subitem": @"ttf"
-          }
-        },
-      @"roboto": @{
-        @"name": @{
-          @"value": @"Roboto",
-          @"name": @"StyleDictionaryAssetFontRobotoName",
-          @"category": @"asset",
-          @"type": @"font",
-          @"item": @"roboto",
-          @"subitem": @"name"
-          },
-        @"ttf": @{
-          @"value": @"assets/fonts/Roboto-Regular.ttf",
-          @"name": @"StyleDictionaryAssetFontRobotoTtf",
-          @"category": @"asset",
-          @"type": @"font",
-          @"item": @"roboto",
+          @"item": @"avenir",
           @"subitem": @"ttf"
           }
         }
@@ -9833,7 +9815,7 @@
   @"font": @{
     @"family": @{
       @"base": @{
-        @"value": @"Open Sans",
+        @"value": @"Avenir",
         @"name": @"StyleDictionaryFontFamilyBase",
         @"category": @"font",
         @"type": @"family",
