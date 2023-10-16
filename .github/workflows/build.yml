@@ -6,12 +6,13 @@ name: Build to tokens to org project
 # or API.
 on: [workflow_dispatch]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-20.04
     name: Build tokens
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v3
         with:
