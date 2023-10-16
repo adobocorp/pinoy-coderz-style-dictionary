@@ -13,13 +13,6 @@ jobs:
     runs-on: ubuntu-20.04
     name: Build tokens
     steps:
-      - name: Generate a token
-        id: generate_token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
@@ -40,6 +33,6 @@ jobs:
       - name: Dispatch build to @adobocorp/pinoy-coders-design-tokens
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ steps.generate_token.outputs.token }}
+          token: ${{ secrets.GENERATED_TOKEN }}
           event-type: dispatched-build
           repository: adobocorp/pinoycoderz-tokens
