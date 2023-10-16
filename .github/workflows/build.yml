@@ -13,6 +13,14 @@ jobs:
     runs-on: ubuntu-20.04
     name: Build tokens
     steps:
+      - name: Generate a token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PEM }}
+          # Set the owner, so the token can be used in all repositories
+          owner: ${{ github.repository_owner }}
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
