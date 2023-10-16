@@ -6,8 +6,7 @@ name: Build to tokens to org project
 # or API.
 on: [workflow_dispatch]
 
-permissions:
-  contents: write
+permissions: write-all
 
 jobs:
   build:
