@@ -17,9 +17,8 @@ jobs:
         id: generate_token
         uses: actions/create-github-app-token@v1
         with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.APP_PEM }}
-          # Set the owner, so the token can be used in all repositories
+          app_id: ${{ vars.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
       - uses: actions/checkout@v3
         with:
@@ -41,6 +40,6 @@ jobs:
       - name: Dispatch build to @adobocorp/pinoy-coders-design-tokens
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ steps.app-token.outputs.token }}
+          token: ${{ steps.generate_token.outputs.token }}
           event-type: dispatched-build
           repository: adobocorp/pinoycoderz-tokens
