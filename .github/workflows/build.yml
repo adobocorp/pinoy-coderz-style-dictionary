@@ -33,4 +33,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           event-type: dispatched-build
-          repository: adobocorp/pinoycoderztokens
+          repository: adobocorp/pinoycoderz-tokens
