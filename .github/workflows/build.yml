@@ -13,8 +13,16 @@ jobs:
     runs-on: ubuntu-20.04
     name: Build tokens
     steps:
+      - name: Creates github app token
+        uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
       - uses: actions/checkout@v3
         with:
+          token: ${{ steps.app-token.outputs.token }}
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - uses: bahmutov/npm-install@v1
@@ -29,15 +37,8 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ steps.app-token.outputs.token }}
           branch: ${{ github.ref }}
-      - name: Creates github app token
-        uses: actions/create-github-app-token@v1
-        id: app-token
-        with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
       - name: Dispatch build to @adobocorp/pinoy-coders-design-tokens
         uses: peter-evans/repository-dispatch@v2
         with:
