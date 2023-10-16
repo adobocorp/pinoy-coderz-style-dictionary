@@ -9,7 +9,7 @@ on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-20.04
-    name: Build and create a pull request
+    name: Build tokens
     steps:
       - uses: actions/checkout@v3
         with:
