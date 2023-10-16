@@ -41,6 +41,6 @@ jobs:
       - name: Dispatch build to @adobocorp/pinoy-coders-design-tokens
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           event-type: dispatched-build
           repository: adobocorp/pinoycoderz-tokens
